@@ -1,0 +1,13 @@
+# Dependencies yang dihasilkan Node
+/node_modules
+
+# Konfigurasi dan Rahasia
+# PENTING: Mencegah Client Secret/ID diunggah ke GitHub
+/config/config.json 
+
+# File Lock/Cache
+package-lock.json
+
+# Log dan Cache OS
+npm-debug.log*
+.DS_Store

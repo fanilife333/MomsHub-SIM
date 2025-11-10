@@ -1,0 +1,48 @@
+{
+  "resourceType": "DiagnosticReport",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/DiagnosticReport"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "ULTRASOUND",
+          "display": "Ultrasound"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "118244005",
+        "display": "Obstetric ultrasound"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/{{PATIENT_ID_FHIR}}"
+  },
+  "encounter": {
+    "reference": "Encounter/{{ENCOUNTER_ID_FHIR}}"
+  },
+  "effectiveDateTime": "2025-11-09T11:45:00+07:00",
+  "issued": "2025-11-09T11:50:00+07:00",
+  "performer": [
+    {
+      "reference": "Practitioner/{{PRACTITIONER_ID_FHIR}}"
+    }
+  ],
+  "conclusion": "Janin tunggal hidup, presentasi kepala, usia gestasi 28 minggu, TBU 1200 gram. Plasenta di fundus, cairan ketuban cukup.",
+  "result": [
+    {
+      "reference": "Observation/{{OBSERVATION_TFU_DJJ_ID_FHIR}}"
+    }
+  ]
+}

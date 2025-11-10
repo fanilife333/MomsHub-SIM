@@ -1,0 +1,32 @@
+{
+  "resourceType": "Encounter",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Encounter"
+    ]
+  },
+  "status": "in-progress",
+  "class": [
+    {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "AMB",
+    "display": "Ambulatory"
+  }
+],
+  "subject": {
+    "reference": "Patient/{{PATIENT_ID_FHIR}}"
+  },
+  "period": {
+    "start": "2025-11-09T09:00:00+07:00"
+  },
+  "location": [
+    {
+      "location": {
+        "reference": "Location/{{LOCATION_ID_FHIR}}"
+      }
+    }
+  ],
+  "serviceProvider": {
+    "reference": "Organization/{{ORGANIZATION_ID_FHIR}}"
+  }
+}

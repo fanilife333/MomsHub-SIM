@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Observation"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "118244005",
+        "display": "Obstetric ultrasound"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/{{PATIENT_ID_FHIR}}"
+  },
+  "encounter": {
+    "reference": "Encounter/{{ENCOUNTER_ID_FHIR}}"
+  },
+  "effectiveDateTime": "2025-11-09T11:30:00+07:00",
+  "valueString": "Janin tunggal hidup, presentasi kepala, usia gestasi 28 minggu, taksiran berat janin (TBU) 1200 gram. Plasenta di fundus, cairan ketuban cukup.",
+  "performer": [
+    {
+      "reference": "Practitioner/{{PRACTITIONER_ID_FHIR}}"
+    }
+  ]
+}

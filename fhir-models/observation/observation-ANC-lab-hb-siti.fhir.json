@@ -1,0 +1,27 @@
+{
+  "resourceType": "Observation",
+  
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/{{SERVICEREQUEST_ID_FHIR}}"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/{{PATIENT_ID_FHIR}}"
+  },
+  "encounter": {
+    "reference": "Encounter/{{ENCOUNTER_ID_FHIR}}"
+  },
+  "effectiveDateTime": "2025-11-09T11:00:00+07:00",
+  "valueQuantity": {
+    "value": 11.5,
+    "unit": "g/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "g/dL"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/{{PRACTITIONER_ID_FHIR}}"
+    }
+  ]
+}

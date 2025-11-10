@@ -1,0 +1,40 @@
+{
+  "resourceType": "ServiceRequest",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceRequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "108252007",
+          "display": "Laboratory procedure"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "718-7",
+        "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/{{PATIENT_ID_FHIR}}"
+  },
+  "encounter": {
+    "reference": "Encounter/{{ENCOUNTER_ID_FHIR}}"
+  },
+  "occurrenceDateTime": "2025-11-09T12:00:00+07:00",
+  "requester": {
+    "reference": "Practitioner/{{PRACTITIONER_ID_FHIR}}"
+  }
+}

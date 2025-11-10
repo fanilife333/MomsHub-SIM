@@ -1,0 +1,39 @@
+{
+  "resourceType": "Organization",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Organization"
+    ]
+  },
+  "active": true,
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://satusehat.kemkes.go.id/id/organization",
+      "value": "{{ORGANIZATION_ID_PORTAL}}" 
+      // Placeholder: ID Organisasi yang Anda dapatkan saat Onboarding Sandbox (543efce6-b243...)
+    }
+  ],
+  "name": "{{NAMA_FASYANKES_ANDA}}", // Placeholder: Contoh: RSIA Kebidanan Latihan FHIR
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "{{NOMOR_TELEPON_FASYANKES}}"
+    },
+    {
+      "system": "email",
+      "value": "{{EMAIL_FASYANKES}}"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "{{ALAMAT_FASYANKES}}"
+      ],
+      "city": "{{KOTA_FASYANKES}}",
+      "postalCode": "{{KODE_POS_FASYANKES}}",
+      "country": "ID"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType": "Practitioner",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Practitioner"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/nik",
+      "value": "3573030303900002"
+    },
+    {
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/str",
+      "value": "3111001117202305"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "text": "Bidan Retno S."
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1990-03-03"
+}

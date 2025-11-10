@@ -1,0 +1,107 @@
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "http://terminology.kemkes.go.id/CodeSystem/identifier-type-kemkes",
+      "value": "{{MRN_LOKAL}}", // Placeholder: ID Rekam Medis Lokal (MRN)
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          }
+        ]
+      }
+    },
+    {
+      "use": "official",
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/nik",
+      "value": "{{NIK_PASIEN}}" // Placeholder: NIK Pasien (Wajib 16 digit)
+    },
+    {
+      "use": "secondary",
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/nokk",
+      "value": "{{NO_KK}}" // Placeholder: Nomor Kartu Keluarga
+    }
+    // No. Paspor (Jika WNA) dapat ditambahkan di sini jika perlu
+  ],
+  "name": [
+    {
+      "use": "official",
+      "text": "{{NAMA_LENGKAP_PASIEN}}", // Placeholder: Nama lengkap pasien
+      "family": "{{NAMA_KELUARGA}}",
+      "given": [
+        "{{NAMA_DEPAN}}"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "{{NOMOR_TELEPON}}", // Placeholder: Nomor Kontak Pasien
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "{{EMAIL_PASIEN}}", // Placeholder: Email Pasien (Opsional)
+      "use": "home"
+    }
+  ],
+  "gender": "female", // Tetap 'female' untuk kasus kebidanan (ibu)
+  "birthDate": "{{TANGGAL_LAHIR}}", // Placeholder: Tanggal Lahir (YYYY-MM-DD)
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "{{DETAIL_ALAMAT}}" // Placeholder: Detail alamat
+      ],
+      "city": "{{NAMA_KOTA}}", // Placeholder: Nama Kota
+      "postalCode": "{{KODE_POS}}",
+      "country": "ID",
+      "extension": [
+        {
+          "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+          "extension": [
+            {
+              "url": "province",
+              "valueCode": "{{KODE_PROVINSI}}" // Placeholder: Kode Provinsi
+            },
+            {
+              "url": "city",
+              "valueCode": "{{KODE_KAB_KOTA}}" // Placeholder: Kode Kota/Kab
+            },
+            {
+              "url": "district",
+              "valueCode": "{{KODE_KECAMATAN}}" // Placeholder: Kode Kecamatan
+            },
+            {
+              "url": "village",
+              "valueCode": "{{KODE_KELURAHAN}}" // Placeholder: Kode Desa/Kelurahan
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "M", // Standar untuk ibu hamil, namun bisa diganti jika diperlukan
+        "display": "Menikah"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenship",
+      "valueCode": "WNI" // Standar WNI
+    }
+  ]
+}

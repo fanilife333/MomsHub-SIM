@@ -1,0 +1,111 @@
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "http://terminology.kemkes.go.id/CodeSystem/identifier-type-kemkes",
+      "value": "1000000000000001",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          }
+        ]
+      }
+    },
+    {
+      "use": "official",
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/nik",
+      "value": "3573030303980001"
+    },
+    {
+      "use": "secondary",
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/nokk",
+      "value": "3573030303980001"
+    },
+    {
+      "use": "secondary",
+      "system": "https://fhir.kemkes.go.id/r4/NamingSystem/paspor",
+      "value": "A11223344"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "text": "Siti Aminah G",
+      "family": "Aminah G",
+      "given": [
+        "Siti"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "081234567890",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "siti.aminah@example.com",
+      "use": "home"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1998-03-03",
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "Jalan Merdeka No. 12 RT 001 RW 002"
+      ],
+      "city": "Pekanbaru",
+      "postalCode": "28292",
+      "country": "ID",
+      "extension": [
+        {
+          "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+          "extension": [
+            {
+              "url": "province",
+              "valueCode": "14"
+            },
+            {
+              "url": "city",
+              "valueCode": "1471"
+            },
+            {
+              "url": "district",
+              "valueCode": "147102"
+            },
+            {
+              "url": "village",
+              "valueCode": "1471021001"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "M",
+        "display": "Menikah"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenship",
+      "valueCode": "WNI"
+    }
+  ]
+}

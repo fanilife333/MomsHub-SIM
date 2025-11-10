@@ -1,0 +1,38 @@
+{
+  "resourceType": "Organization",
+  "meta": {
+    "profile": [
+      "https://fhir.kemkes.go.id/r4/StructureDefinition/Organization"
+    ]
+  },
+  "active": true,
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://satusehat.kemkes.go.id/id/organization",
+      "value": "543efce6-b243-4676-837a-2459d0c9e91a"
+    }
+  ],
+  "name": "RSIA Kebidanan FHIR Latihan Pekanbaru",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "081212345678"
+    },
+    {
+      "system": "email",
+      "value": "rsia.kebidanan.latihan@mail.com"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "Jalan Merdeka No. 10 Sandbox"
+      ],
+      "city": "Pekanbaru",
+      "postalCode": "28292",
+      "country": "ID"
+    }
+  ]
+}
